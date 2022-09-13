@@ -5,7 +5,7 @@ class SimpleReport:
 
     def generate(products):
         company_names = [item["nome_da_empresa"] for item in products]
-        counter = Counter(company_names).most_common(1)
+        counter = Counter(company_names).most_common()
 
         older_product = sorted(
             products, key=lambda item: item["data_de_fabricacao"]
@@ -20,5 +20,5 @@ class SimpleReport:
         return (
           f"Data de fabricação mais antiga: {older}\n"
           f"Data de validade mais próxima: {newest}\n"
-          f"Empresa com mais produtos: {counter[0]}"
+          f"Empresa com mais produtos: {counter[0][0]}"
         )
