@@ -18,10 +18,10 @@ def test_cria_produto():
     assert type(produto.nome_do_produto) == str
     assert produto.nome_da_empresa == 'Colgate'
     assert type(produto.nome_da_empresa) == str
-    assert produto.produto_de_fabricacao == '2022-02-22'
-    assert type(produto.produto_de_fabricacao) == str
-    assert produto.produto_de_validade == '2022-07-15'
-    assert type(produto.produto_de_validade) == str
+    assert produto.data_de_fabricacao == '2022-02-22'
+    assert type(produto.data_de_fabricacao) == str
+    assert produto.data_de_validade == '2022-07-15'
+    assert type(produto.data_de_validade) == str
     assert produto.numero_de_serie == '265785'
     assert type(produto.numero_de_serie) == str
     assert produto.instrucoes_de_armazenamento == 'Sem especificação'
